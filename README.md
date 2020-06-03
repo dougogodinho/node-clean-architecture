@@ -58,12 +58,4 @@ yarn add express apollo-server-express graphql
 ```
 Then, check src folder from this repo if you need some ideas
 
-### Add some scripts to `package.json`
-```javascript
-{
-    "build": "tsc",
-    "api": "node dist/http.js",
-    "api:dev": "sucrase dist/http.ts"
-}
-```
-   
+Also... check `package.json` for some smart scripts 😉  
