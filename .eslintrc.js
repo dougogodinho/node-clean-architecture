@@ -5,7 +5,7 @@ module.exports = {
     jest: true,
   },
   extends: [
-    'standard',
+    'standard-with-typescript',
   ],
   globals: {
     Atomics: 'readonly',
@@ -13,6 +13,7 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    project: './tsconfig.json',
     ecmaVersion: 11,
     sourceType: 'module',
   },
@@ -21,5 +22,7 @@ module.exports = {
   ],
   rules: {
     'comma-dangle': 'off',
+    '@typescript-eslint/prefer-nullish-coalescing': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
   },
 }
