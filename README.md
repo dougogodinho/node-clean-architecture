@@ -27,8 +27,8 @@ yarn  add typescript eslint sucrase jest ts-jest -D
 yarn tsc --init
 yarn add @types/node @types/jest -D
 ```
-Add `"exclude": ["node_modules", "dist"]` to `tsconfig.json`
-and add/uncomment `"outDir": "./dist"` and  `"rootDir": "./src"`
+Add `"include": ["**/*.*"]` and `"exclude": ["node_modules", "dist"]` to `tsconfig.json`,
+then, add/uncomment `"outDir": "./dist"` and  `"rootDir": "./src"`
 
 References 
 | [TypeScript](https://www.typescriptlang.org/docs)
