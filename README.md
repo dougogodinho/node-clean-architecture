@@ -22,14 +22,38 @@ Consider to add a `.gitignore` file
 yarn  add typescript eslint sucrase jest ts-jest -D
 ```
 
-### Setup ESLint with StandardJS
+### Setup TypeScript 
+```bash
+yarn tsc --init
+yarn add @types/node @types/jest -D
+```
+Add `"include": ["src/**.ts"]` to `tsconfig.json`
+and add/uncomment `"outDir": "./dist"` and  `"rootDir": "./src"`
+
+References 
+| [TypeScript](https://www.typescriptlang.org/docs)
+| [@types/...](https://github.com/DefinitelyTyped/DefinitelyTyped)
+
+### Setup Jest 
+```bash
+yarn jest --init
+```
+Then, add `preset: "ts-jest"` to `jest.config.js`
+
+References 
+| [Jest](https://jestjs.io)
+| [Jest with Typescript (ts-jest)](https://github.com/kulshekhar/ts-jest)
+
+### Setup ESLint and StandardJS with TypeScript
 ```bash
 yarn eslint --init
 yarn add -D eslint-config-standard-with-typescript
 rm package-lock.json && yarn
 ```
+Add `".eslintrc.js"` to `include` on `tsconfig.json`
+
 Then, on `.eslintrc.js`:
-- Change `extends: 'standard-with-typescript'`  
+- Change `extends: 'standard-with-typescript'`
 - Add `project: './tsconfig.json'` to `parserOptions`
 - Add  `jest: true` to `env`
 
@@ -47,27 +71,6 @@ References
 | [ESLint](https://eslint.org)
 | [Standard](https://standardjs.com)
 | [Standard with TypeScript](https://github.com/standard/eslint-config-standard-with-typescript#readme) 
-
-### Setup TypeScript 
-```bash
-yarn tsc --init
-yarn add @types/node @types/jest -D
-```
-Add (or uncomment) "outDir": "./dist" and  "rootDir": "./src" to 
-
-References 
-| [TypeScript](https://www.typescriptlang.org/docs)
-| [@types/...](https://github.com/DefinitelyTyped/DefinitelyTyped)
-
-### Setup Jest 
-```bash
-yarn jest --init
-```
-Then, add `preset: "ts-jest"` to `jest.config.js`
-
-References 
-| [Jest](https://jestjs.io)
-| [Jest with Typescript (ts-jest)](https://github.com/kulshekhar/ts-jest)
 
 ### Sucrase or TS-node
 Choose your weapons, they say... Both Sucrase and TS-node are like Babel
