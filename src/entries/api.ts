@@ -20,4 +20,6 @@ export function startApi ({ expressServer, apolloServer, env, logger }: deps): v
   })
 }
 
-container.build(startApi)
+// if not test: call startApi
+// istanbul ignore next line
+'test' in global || container.build(startApi)

@@ -27,7 +27,7 @@ yarn  add typescript eslint sucrase jest ts-jest -D
 yarn tsc --init
 yarn add @types/node @types/jest -D
 ```
-Add `"include": ["src/**.ts"]` to `tsconfig.json`
+Add `"exclude": ["node_modules", "dist"]` to `tsconfig.json`
 and add/uncomment `"outDir": "./dist"` and  `"rootDir": "./src"`
 
 References 
@@ -50,8 +50,6 @@ yarn eslint --init
 yarn add -D eslint-config-standard-with-typescript
 rm package-lock.json && yarn
 ```
-Add `".eslintrc.js"` to `include` on `tsconfig.json`
-
 Then, on `.eslintrc.js`:
 - Change `extends: 'standard-with-typescript'`
 - Add `project: './tsconfig.json'` to `parserOptions`

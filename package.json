@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
+    "cover": "jest --coverage",
     "lint": "eslint src/**.ts",
     "build": "yarn lint && yarn tsc",
     "api": "node dist/entries/api.js",
