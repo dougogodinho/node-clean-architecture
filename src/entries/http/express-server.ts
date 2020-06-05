@@ -1,7 +1,11 @@
-import express, { Express } from 'express'
+import express, { Express, RequestHandler } from 'express'
 
 export const makeExpressServer = (): Express => {
   const app = express()
-  app.get('/', (_, res) => res.send('hello world!'))
+  app.get('/', helloWorldResolver)
   return app
+}
+
+export const helloWorldResolver: RequestHandler = (req, res) => {
+  res.send('hello world!')
 }
