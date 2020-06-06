@@ -13,7 +13,7 @@
     "api:dev": "sucrase-node src/entries/api.ts"
   },
   "dependencies": {
-    "apollo-server-express": "^2.14.1",
+    "apollo-server-express": "^2.14.2",
     "awilix": "^4.2.6",
     "express": "^4.17.1",
     "graphql": "^15.0.0"
