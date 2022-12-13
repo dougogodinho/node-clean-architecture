@@ -15,7 +15,7 @@
   "dependencies": {
     "apollo-server-express": "^2.14.1",
     "awilix": "^4.2.6",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "graphql": "^15.0.0"
   },
   "devDependencies": {
